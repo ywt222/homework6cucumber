@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>homework6 by ywt222</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/search.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+        <div id="in">
+            <input id="input">
+            <div id="list_number"></div>
+        </div>
+
+        <div class="book">
+            <ul class="list"></ul>
+            <button id="add" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#add_Modal">
+                添加
+            </button>
+            <div class='page'></div>
+        </div>
+</div>
+
+<!-- 添加书签 -->
+<div class="modal fade" id="add_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">添加书签</h4>
+            </div>
+            <div class="modal-body">
+                <p>书签名称</p>
+                <input type='text' class="form-control"  id='add_title'>
+
+                <p>书签地址</p>
+                <input type='text' class="form-control" id='add_url'>
+                <div id="add_warn"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="add_confirm">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--删除书签-->
+<div class="modal fade" id="delete_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" >删除记录</h4>
+            </div>
+            <div class="modal-body">
+                确认要删除吗？
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="delete_confirm"data-dismiss="modal">是</button>
+                <button type="button" class="btn btn-default" id="delete_cancle" data-dismiss="modal">否</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
